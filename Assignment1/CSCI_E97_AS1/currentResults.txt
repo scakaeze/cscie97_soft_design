@@ -1,0 +1,20 @@
+Lucy works_with Joe.
+Lucy works_with Joe.
+
+QueryEngineException: (Lucy ?) is an incomplete query set
+
+? fights_with Joe.
+QueryEngineException: (? fights_with Joe) is not a well formed query set
+ Clue - Check predicate
+
+? works_with Peter and Phil.
+QueryEngineException: (? works_with Peter and Phil) is not a well formed query set.
+Clue - check object or line more than three String elements
+
+Peter works_with ?.
+QueryEngineException: (Peter works_with ?) is not a well formed query set.
+ Clue - Check subject
+
+Lucy works_with Lucy.
+QueryEngineException: (Lucy works_with Lucy) is not a well formed query set.
+Clue - subject, predicate or node arrangement

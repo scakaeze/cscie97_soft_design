@@ -1,0 +1,6 @@
+Lucy works_with Joe.
+Lucy ?.
+? fights_with Joe.
+? works_with Peter and Phil.
+Peter works_with ?.
+Lucy works_with Lucy.

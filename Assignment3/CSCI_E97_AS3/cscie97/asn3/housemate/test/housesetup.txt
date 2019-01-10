@@ -1,0 +1,45 @@
+define house house1 address “374 Beacon Street, Boston, MA”
+
+define room kitchen1 floor1 type kitchen house house1 windows 2
+define appliance door1 type door room house1 kitchen1
+define appliance light1 type light room house1 kitchen1
+define appliance AVA1 type AVA room house1 kitchen1
+define sensor camera1 type camera room house1 kitchen1
+define appliance thermostat1 type thermostat room house1 kitchen1
+define appliance oven1 type oven room house1 kitchen1
+define appliance smoke_detector1 type smoke_detector room house1 kitchen1
+
+
+define room bedroom1 floor1 type bedroom house house1 windows 2
+define appliance door2 type door room house1 bedroom1
+define appliance light2 type light room house1 bedroom1
+define appliance AVA2 type AVA room house1 bedroom1
+define sensor camera2 type camera room house1 bedroom1
+define appliance thermostat2 type thermostat room house1 bedroom1
+define appliance refrigerator1 type refrigerator room house1 bedroom1
+
+define occupant father type adult
+define occupant mother type adult
+
+
+
+set appliance house1 kitchen1 AVA1 status input value open_door
+set appliance house1 kitchen1 AVA1 status input value close_door
+set appliance house1 bedroom1 AVA2 status input value lights_on
+set appliance house1 bedroom1 AVA2 status input value lights_off
+set appliance house1 bedroom1 AVA2 status input value lights_color_to_RED
+set appliance house1 bedroom1 AVA2 status input value lights_color_to_GREEN
+
+set sensor house1 kitchen1 camera1 status input value occupant_detected+father
+set sensor house1 kitchen1 camera1 status input value occupant_leaving+father
+set sensor house1 bedroom1 camera2 status input value occupant_detected+father
+
+set sensor house1 bedroom1 camera2 status input value occupant_is_active+father
+set sensor house1 bedroom1 camera2 status input value occupant_is_inactive+father
+
+set appliance house1 bedroom1 AVA1 status input value where_is+father
+
+set appliance house1 kitchen1 oven1 status input value time_to_cook_is_zero
+
+set appliance house1 bedroom1 refrigerator1 status input value beer_count_is+4
+set appliance house1 bedroom1 refrigerator1 status input value beer_count_is+7

@@ -1,0 +1,120 @@
+login admin password house1
+
+define house house1 address “374 Beacon Street, Boston, MA”
+define house house2 address “19 Peverell street, Boston, MA”
+
+define room kitchen1 floor1 type kitchen house house1 windows 2
+
+define appliance door1 type door room house1 kitchen1
+
+define appliance light1 type light room house1 kitchen1
+define appliance AVA1 type AVA room house1 kitchen1
+define sensor camera1 type camera room house1 kitchen1
+define appliance thermostat1 type thermostat room house1 kitchen1
+define appliance oven1 type oven room house1 kitchen1
+define appliance smoke_detector1 type smoke_detector room house1 kitchen1
+
+
+define room bedroom1 floor1 type bedroom house house1 windows 2
+define appliance door2 type door room house1 bedroom1
+define appliance light2 type light room house1 bedroom1
+define appliance AVA2 type AVA room house1 bedroom1
+define sensor camera2 type camera room house1 bedroom1
+define appliance thermostat2 type thermostat room house1 bedroom1
+define appliance refrigerator1 type refrigerator room house1 bedroom1
+
+
+define occupant father type adult
+define occupant mother type adult
+define occupant Sam type adult
+define occupant Jimmy type adult
+define occupant Debra_Smart type adult
+
+
+define_permission user_admin User_Administrator Create_Update_Delete_Users
+define_permission control_oven Control_Oven Full_Control_of_Oven
+define_permission control_thermostat Control_Thermostat Full_Control_of_Thermostat
+define_permission control_door Control_Door Full_Control_of_Door
+define_permission control_window Control_Window Full_Control_of_Window
+define_permission control_light Control_Light Full_Control_of_Lights
+
+
+define_role adult_resident Adult_Resident_Role Has_all_permissions_of_an_adult_resident
+define_role child_resident Child_Resident_Role Has_all_permissions_of_child_resident
+define_role admin_role Admin_Role Has_all_permissions_of_an_administrator
+
+
+add_entitlement_to_role admin_role user_admin
+add_entitlement_to_role admin_role control_oven
+add_entitlement_to_role admin_role control_thermostat
+add_entitlement_to_role admin_role control_door
+add_entitlement_to_role admin_role control_window
+add_entitlement_to_role admin_role control_light
+
+add_entitlement_to_role adult_resident control_oven
+add_entitlement_to_role adult_resident control_thermostat
+add_entitlement_to_role adult_resident control_door
+add_entitlement_to_role adult_resident control_window
+add_entitlement_to_role adult_resident control_light
+
+add_entitlement_to_role child_resident control_door
+add_entitlement_to_role child_resident control_window
+add_entitlement_to_role child_resident control_light
+
+
+create_resource_role house1_child_resident child_resident house1
+create_resource_role house1_adult_resident adult_resident house1
+create_resource_role house1_admin admin_role house1
+
+
+create_user sam Sam
+create_user jimmy Jimmy
+create_user debra Debra_Smart
+
+add_user_credential sam voice_print --sam--
+add_user_credential jimmy voice_print --jimmy--
+add_user_credential debra voice_print --debra--
+
+add_user_credential sam password sam_secret
+add_user_credential jimmy password jimmy_secret
+add_user_credential debra password debra_secret
+
+add_user_credential sam username sam_bigalo
+add_user_credential jimmy username jimmy_baller
+add_user_credential debra username debracula
+
+add_resource_role_to_user sam house1_adult_resident
+add_resource_role_to_user jimmy house1_child_resident
+add_resource_role_to_user debra house1_admin
+
+logout central admin
+login debracula debra_secret house1
+
+set appliance house1 kitchen1 AVA1 status input value open_door?--sam--
+set appliance house1 kitchen1 AVA1 status input value close_door?--debra--
+set appliance house1 bedroom1 AVA2 status input value lights_off?--jimmy--
+set appliance house1 bedroom1 AVA2 status input value lights_on?--jimmy--
+set appliance house1 bedroom1 AVA2 status input value lights_color_to_RED?--debra--
+set appliance house1 bedroom1 AVA2 status input value lights_color_to_GREEN?--debra--
+
+set sensor house1 kitchen1 camera1 status input value occupant_detected+father
+set sensor house1 kitchen1 camera1 status input value occupant_leaving+father
+set sensor house1 bedroom1 camera2 status input value occupant_detected+father
+
+set sensor house1 bedroom1 camera2 status input value occupant_is_active+father
+set sensor house1 bedroom1 camera2 status input value occupant_is_inactive+father
+
+set appliance house1 bedroom1 AVA1 status input value where_is+father?--sam--
+
+
+set appliance house1 kitchen1 oven1 status input value time_to_cook_is_zero
+
+set appliance house1 bedroom1 refrigerator1 status input value beer_count_is+4
+set appliance house1 bedroom1 refrigerator1 status input value beer_count_is+7
+
+set appliance house1 kitchen1 smoke_detector1 status input value mode_FIRE
+
+logout debra
+login sam_bigalo sam_secret house1
+logout jimmy
+login jimmy_baller jimmy_secret house1

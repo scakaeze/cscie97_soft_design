@@ -1,0 +1,23 @@
+define house house1 address “374 Beacon Street, Boston, MA”
+define house house2 address “400 pando Street, Boston, MA”
+define house house3 address “14741 Saturn Drive, San Leandro, CA”
+define room kitchen1 floor1 type kitchen house house1 windows 2
+define room bedroom1 floor1 type bedroom house house1 windows 3
+define sensor smoke_detector1 type smoke_detector room house1 kitchen1
+
+
+set sensor house1 kitchen1 smoke_detector1 status power value ON
+set sensor house1 kitchen1 smoke_detector1 status heat value High
+show sensor house1 kitchen1 smoke_detector1
+
+
+set sensor house1 kitchen1 smoke_detector1 status heat value Low
+set sensor house1 kitchen1 smoke_detector1 status power value OFF
+show sensor house1 kitchen1 smoke_detector1
+show configuration
+show configuration room house1 kitchen1
+
+
+define house house1 address “374 Beacon Street, Boston, MA”
+defin room kitchen1 floor1 type kitchen house house1 windows 2
+show appliance house1 kitchen1 smoke_detector2

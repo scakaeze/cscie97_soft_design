@@ -1,0 +1,84 @@
+AcessDeniedException:Current token does not have admin privileges
+AccessDeniedException: No logged admin. Entering sleep mode
+AccessDeniedException: Please enter accurate Admin Username and matching Password
+Login bot: Central Admin's login was Successful
+
+AuthenticationException: The occupant corresponding to Bill does not exist
+Logout Bot: Logging out Central User
+
+Login Bot: User debra's Login was Successful
+
+************************AVA1 input open_door************************
+AcessDeniedException: --baammy-- voice print does not match any known users or matched user lacks required entitlement
+
+
+************************AVA1 input open_door************************
+kitchen1 [door1 status opened] by sam
+
+
+************************AVA1 input close_door************************
+kitchen1 [door1 status closed] by debra
+
+
+************************AVA2 input lights_off************************
+bedroom1 [light2 status OFF] by jimmy
+
+
+************************AVA2 input lights_on************************
+bedroom1 [light2 status ON] by jimmy
+
+
+************************AVA2 input lights_color_to_RED************************
+bedroom1 [light2 status RED] by debra
+
+
+************************AVA2 input lights_color_to_GREEN************************
+bedroom1 [light2 status GREEN] by debra
+
+
+************************camera1 input occupant_detected+father************************
+kitchen1 [thermostat1 status High]
+kitchen1 [light1 status ON]
+
+
+************************camera1 input occupant_leaving+father************************
+kitchen1 [thermostat1 status low]
+kitchen1 [light1 status OFF]
+
+
+************************camera2 input occupant_detected+father************************
+bedroom1 [thermostat2 status High]
+bedroom1 [light2 status ON]
+
+
+************************camera2 input occupant_is_active+father************************
+[father status active]
+
+
+************************camera2 input occupant_is_inactive+father************************
+[father status inactive]
+bedroom1 [light2 status DIM]
+
+
+Logout Bot: Current admin token has expired
+
+
+AccessDeniedException: No logged admin. Entering sleep mode
+Logout Bot: Current admin token has expired
+
+
+AccessDeniedException: No logged admin. Entering sleep mode
+Logout Bot: Current admin token has expired
+
+
+Logout Bot: Logging out last User: debra
+
+Logout Bot: Current admin token has expired
+
+
+Login Bot: User sam's Login was Successful
+
+Logout Bot: Logging out last User: sam
+
+Login Bot: User jimmy's Login was Successful
+

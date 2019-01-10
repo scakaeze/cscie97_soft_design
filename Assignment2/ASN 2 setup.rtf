@@ -1,0 +1,108 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1561
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 Monaco;}
+{\colortbl;\red255\green255\blue255;\red106\green62\blue62;\red127\green0\blue85;\red42\green0\blue255;
+\red63\green127\blue95;\red0\green0\blue192;}
+{\*\expandedcolortbl;;\csgenericrgb\c41569\c24314\c24314;\csgenericrgb\c49804\c0\c33333;\csgenericrgb\c16471\c0\c100000;
+\csgenericrgb\c24706\c49804\c37255;\csgenericrgb\c0\c0\c75294;}
+\margl1440\margr1440\vieww15860\viewh9920\viewkind0
+\deftab720
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs22 \cf0 define house house1 address \'93374 Beacon Street, Boston, MA\'94\
+  0.         1          2           3                  4\
+\
+\
+define room kitchen1 floor1 type kitchen house house1 windows 2\
+   0.       1           2         3         4         5         6           7           8         9\
+\
+define occupant joe_smith type adult\
+  0.              1             2          3       4\
+\
+define sensor smoke_detector1 type smoke_detector room house1 kitchen1\
+   0          1           2                         3              4                 5        6          7\
+\
+set appliance house1  kitchen1 oven1 status power value ON\
+ 0.   1.                2             3           4         5           6       7     8\
+\
+show appliance house1 kitchen1 oven1 status temperature\
+    0           1             2            3         4         5              6\
+\
+show appliance house1 kitchen1 oven1\
+   0.        1              2           3          4\
+\
+show configuration house house1\
+   0            1                 2          3\
+\
+show configuration room house1 kitchen1\
+    0            1               2         3         4\
+\
+\
+\pard\pardeftab720\partightenfactor0
+
+\f1 \cf0 API \cf2 ball\cf0  = \cf3 new\cf0  API();\
+        \
+        String \cf2 bog\cf0 ;\
+        \
+        \cf2 ball\cf0 .define(\cf4 "define house house1 address \'93374 Beacon Street, Boston, MA\'94"\cf0 );\
+        \
+        \cf2 ball\cf0 .define(\cf4 "define house house2 address \'93400 pando Street, Boston, MA\'94"\cf0 );\
+        \
+        \cf2 ball\cf0 .define(\cf4 "define house house3 address \'9314741 Saturn Drive, San Leandro, CA\'94"\cf0 );\
+        \
+        \cf2 ball\cf0 .define(\cf4 "define room kitchen1 floor1 type kitchen house house1 windows 2"\cf0 );\
+        \
+        \cf2 ball\cf0 .define(\cf4 "define room bedroom1 floor1 type bedroom house house1 windows 3"\cf0 );\
+        \
+        \cf2 ball\cf0 .define(\cf4 "define appliance smoke_detector1 type smoke_detector room house1 kitchen1"\cf0 );\
+        \
+        \cf2 ball\cf0 .set(\cf4 "set appliance house1 kitchen1 smoke_detector1 status power value ON"\cf0 );\
+        \
+        \cf2 ball\cf0 .set(\cf4 "set appliance house1 kitchen1 smoke_detector1 status heat value High"\cf0 );\
+        \
+       \cf5 // ball.get("show appliance house1 kitchen1 smoke_detector1");\cf0 \
+        \
+        \cf2 ball\cf0 .set(\cf4 "set appliance house1 kitchen1 smoke_detector1 status heat value Low"\cf0 );\
+        \
+       \cf5 // ball.get("show appliance house1 kitchen1 smoke_detector1");\cf0 \
+       \
+        \cf5 //ball.get("show configuration house house1");\cf0 \
+        \
+       \cf5 // ball.get("show configuration room house1 kitchen1");\cf0 \
+        \
+       \cf5 // ball.get("show configuration room house1 bedroom1");\cf0 \
+        \
+        \cf2 bog\cf0  = \cf2 ball\cf0 .get(\cf4 "show configuration"\cf0 );\
+        \
+        System.\cf6 out\cf0 .println(\cf2 bog\cf0 );\
+        \
+        \cf2 bog\cf0  = \cf2 ball\cf0 .define(\cf4 "aboki is a father "\cf0 );\
+        \
+        System.\cf6 out\cf0 .println(\cf2 bog\cf0 );\
+\
+\
+\
+   \cf3 int\cf0  \cf2 b\cf0  = 2;	\
+		String \cf2 g\cf0  = \cf4 "Import exception: My one time exception with some message!"\cf0 ; \
+		\
+	\
+   \cf3 try\cf0  \{\
+	   \cf3 if\cf0  (\cf2 b\cf0  == 2)\
+	   \cf3 throw\cf0  \cf3 new\cf0  Exception(\cf2 g\cf0 );\
+   \}\
+   \
+   \cf3 catch\cf0  (Exception \cf2 e\cf0 )\
+   \{\
+	  \cf5 // System.out.println(" \ul \ulc5 aboki\ulnone ");\cf0 \
+	   System.\cf6 out\cf0 .println(\cf2 g\cf0 );\
+\
+\
+\pard\pardeftab720\partightenfactor0
+\cf0 show configuration house house1\
+show configuration room house1 kitchen1\
+show configuration\
+how appliance house1 kitchen1 smoke_detector1\
+\pard\pardeftab720\partightenfactor0
+\cf0    
+\f0 \
+\
+}

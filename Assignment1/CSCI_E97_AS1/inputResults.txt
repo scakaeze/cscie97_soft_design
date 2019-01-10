@@ -1,0 +1,51 @@
+Starbucks sells Coffee.
+Starbucks sells Coffee.
+
+Starbucks sells Donuts.
+QueryEngineException: (Starbucks sells Donuts) is not a well formed query set.
+Clue - check object or line more than three String elements
+
+Starbucks sells ?.
+Starbucks sells Coffee.
+Starbucks sells Cake.
+
+? has_store_location HarvardSquare.
+Starbucks has_store_location HarvardSquare.
+HarvardCoop has_store_location HarvardSquare.
+
+Lucy ? ?.
+Lucy works_with Joe.
+Lucy works_at Starbucks.
+Lucy plays_instrument Guitar.
+Lucy plays_sport Soccer.
+Lucy has_friend Joe.
+Lucy lives_near HarvardSquare.
+Lucy likes_to_eat Cake.
+Lucy works_at HarvardCoop.
+
+Joe plays_sport ?.
+Joe plays_sport Hockey.
+Joe plays_sport Soccer.
+Joe plays_sport Cricket.
+
+Lucy plays_sport ?.
+Lucy plays_sport Soccer.
+
+? plays_sport ?.
+Joe plays_sport Hockey.
+Joe plays_sport Soccer.
+Joe plays_sport Cricket.
+Lucy plays_sport Soccer.
+
+? sells Coffee.
+Starbucks sells Coffee.
+HarvardCoop sells Coffee.
+
+? ? HarvardCoop.
+Lucy works_at HarvardCoop.
+
+HarvardCoop ? ?.
+HarvardCoop sells Coffee.
+HarvardCoop sells Book.
+HarvardCoop sells Cake.
+HarvardCoop has_store_location HarvardSquare.

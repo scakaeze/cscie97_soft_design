@@ -1,0 +1,42 @@
+java.lang.Exception:  CommandException: appliance camera1 does not exist
+*****************************refrigerator1 input close_door*****************************
+java.lang.Exception: ControllerCommandException: (refrigerator1 input close_door) is an invalid command or the command doesnot match the device type
+
+
+java.lang.Exception:  CommandException: sensor AVA2 does not exist
+*****************************AVA2 input lights_off*****************************
+bedroom1 [light2 status OFF]
+
+
+java.lang.Exception:  CommandException: sensor oven1 does not exist
+*****************************camera1 input occupant_leaving+father*****************************
+kitchen1 [thermostat1 status low]
+kitchen1 [light1 status OFF]
+
+
+java.lang.Exception:  CommandException: sensor refrigerator1 does not exist
+*****************************camera2 input occupant_is_active+father*****************************
+[father status active]
+
+
+java.lang.Exception:  CommandException: sensor refrigerator1 does not exist
+*****************************AVA1 input where_is+father*****************************
+[father location unknown]
+
+
+*****************************oven1 input time_to_cook_is_zero*****************************
+[oven1 status OFF]
+
+
+*****************************AVA2 input beer_count_is+4*****************************
+java.lang.Exception: ControllerCommandException: (AVA2 input beer_count_is+4) is an invalid command or the command doesnot match the device type
+
+
+*****************************refrigerator1 input beer_count_is+7*****************************
+7 beers is still enough according for mother. No extra beer needed
+
+
+*****************************smoke_detector1 input mode_fire*****************************
+java.lang.Exception: ControllerCommandException: (smoke_detector1 input mode_fire) is an invalid command or the command doesnot match the device type
+
+

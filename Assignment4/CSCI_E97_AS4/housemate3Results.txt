@@ -1,0 +1,87 @@
+Login bot: Central Admin's login was Successful
+
+Logout Bot: Logging out Central User
+
+Login Bot: User debra's Login was Successful
+
+************************AVA1 input open_door************************
+kitchen1 [door1 status opened] by sam
+
+
+************************AVA1 input close_door************************
+kitchen1 [door1 status closed] by debra
+
+
+************************AVA2 input lights_off************************
+bedroom1 [light2 status OFF] by jimmy
+
+
+************************AVA2 input lights_on************************
+bedroom1 [light2 status ON] by jimmy
+
+
+************************AVA2 input lights_color_to_RED************************
+bedroom1 [light2 status RED] by debra
+
+
+************************AVA2 input lights_color_to_GREEN************************
+bedroom1 [light2 status GREEN] by debra
+
+
+************************camera1 input occupant_detected+father************************
+kitchen1 [thermostat1 status High]
+kitchen1 [light1 status ON]
+
+
+************************camera1 input occupant_leaving+father************************
+kitchen1 [thermostat1 status low]
+kitchen1 [light1 status OFF]
+
+
+************************camera2 input occupant_detected+father************************
+bedroom1 [thermostat2 status High]
+bedroom1 [light2 status ON]
+
+
+************************camera2 input occupant_is_active+father************************
+[father status active]
+
+
+************************camera2 input occupant_is_inactive+father************************
+[father status inactive]
+bedroom1 [light2 status DIM]
+
+
+************************AVA1 input where_is+father************************
+[father location bedroom1] by sam
+
+
+************************oven1 input time_to_cook_is_zero************************
+[oven1 status OFF]
+
+
+************************refrigerator1 input beer_count_is+4************************
+earl@walgreens_beer: refrigerator1 needs 2 crates of beer. Deliver ASAP or might accidentally dial 911
+
+
+************************refrigerator1 input beer_count_is+7************************
+7 beers is still enough according for mother. No extra beer needed
+
+
+************************smoke_detector1 input mode_FIRE************************
+kitchen1 [light1 status ON]
+bedroom1 [light2 status ON]
+Fire in the Kitchen, please leave the house immediately.
+First floor occupants, please use the window if possible
+Dialing 911.............................................
+Hello Operator,house1 at “374 Beacon Street, Boston, MA”  is on fire!!!
+
+
+Logout Bot: Logging out last User: debra
+
+Login Bot: User sam's Login was Successful
+
+Logout Bot: Logging out last User: sam
+
+Login Bot: User jimmy's Login was Successful
+

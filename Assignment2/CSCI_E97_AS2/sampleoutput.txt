@@ -1,0 +1,12 @@
+smoke_detector1 heat High
+smoke_detector1 power ON
+smoke_detector1 power OFF
+smoke_detector1 heat Low
+House house3 is located at “14741 Saturn Drive, San Leandro, CA” 
+House house2 is located at “400 pando Street, Boston, MA” 
+House house1 is located at “374 Beacon Street, Boston, MA” 
+Room kitchen1 is located in house house1 on floor floor1. It is also a kitchen with 2 windows
+java.lang.Exception: CommandException: The house already exists or (define house house1 address “374 Beacon Street, Boston, MA”) is invalid command
+java.lang.Exception: CommandException: (defin room kitchen1 floor1 type kitchen house house1 windows 2) is an invalid command
+java.lang.Exception:  CommandException: appliance smoke_detector2 does not exist
+java.lang.Exception: ImportException: Import file does not exist
