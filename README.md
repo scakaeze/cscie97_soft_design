@@ -1,1 +1,5 @@
-# Reference Repo for CSCI-E97
+# CSCI-E97 Course Desscription
+
+This course approaches object-oriented software design from three perspectives: the software engineering principles that enable development of quality software, the modeling of software components using the Unified Modeling Language (UML), and the application of design patterns as a means of reusing design models that are accepted best practices. These patterns include both the original software patterns as well as more recent modularization patterns for software construction. There is at least one significant modeling exercise and a set of programming assignments that require the application of design principles and good programming technique. Students are expected to write a detailed description of the design for each of their programs, incorporating UML models as appropriate. Students implement their programs in the Java programming language. In addition, there is at least one significant assignment that requires designing and documenting a software subsystem without implementation.
+
+
